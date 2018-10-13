@@ -15,6 +15,9 @@
 		4A0A581221711FF30076291A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0A581121711FF30076291A /* Assets.xcassets */; };
 		4A0A581521711FF30076291A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0A581321711FF30076291A /* LaunchScreen.storyboard */; };
 		4A0A582021711FF30076291A /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A581F21711FF30076291A /* WeatherTests.swift */; };
+		4A0A582D2171260A0076291A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A582C2171260A0076291A /* City.swift */; };
+		4A0A582F217126110076291A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A582E217126110076291A /* Weather.swift */; };
+		4A0A58312171728C0076291A /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0A58302171728C0076291A /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		4A0A581B21711FF30076291A /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0A581F21711FF30076291A /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		4A0A582121711FF30076291A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A0A582C2171260A0076291A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		4A0A582E217126110076291A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		4A0A58302171728C0076291A /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		4A0A580421711FF00076291A /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				4A0A582B217125FE0076291A /* Model */,
 				4A0A582A217120850076291A /* Service */,
 				4A0A580521711FF00076291A /* AppDelegate.swift */,
 				4A0A580A21711FF00076291A /* MasterViewController.swift */,
@@ -106,8 +113,18 @@
 		4A0A582A217120850076291A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4A0A58302171728C0076291A /* WeatherService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		4A0A582B217125FE0076291A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A0A582C2171260A0076291A /* City.swift */,
+				4A0A582E217126110076291A /* Weather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A0A580921711FF00076291A /* Weather.xcdatamodeld in Sources */,
+				4A0A582D2171260A0076291A /* City.swift in Sources */,
 				4A0A580621711FF00076291A /* AppDelegate.swift in Sources */,
 				4A0A580B21711FF00076291A /* MasterViewController.swift in Sources */,
+				4A0A582F217126110076291A /* Weather.swift in Sources */,
 				4A0A580D21711FF00076291A /* DetailViewController.swift in Sources */,
+				4A0A58312171728C0076291A /* WeatherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 694SF89BJ3;
 				INFOPLIST_FILE = Weather/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 694SF89BJ3;
 				INFOPLIST_FILE = Weather/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
